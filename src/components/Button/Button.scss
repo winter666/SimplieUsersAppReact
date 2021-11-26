@@ -3,6 +3,7 @@ button.custom-btn {
     height: 1.5rem;
     cursor: pointer;
     border-radius: 3px;
+    transition: box-shadow .3s;
 
     &.success {
         background-color: #008000;

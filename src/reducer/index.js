@@ -46,7 +46,7 @@ function reducer(state = initState, action) {
         case 'users.delete':
             userIndx = users.findIndex((user) => user.id === action.payload.user_id);
             if (userIndx >= 0) {
-                users.slice(userIndx, 1);
+                users.splice(userIndx, 1);
             }
             break;
         default:
