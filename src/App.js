@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.scss';
+import {connect} from 'react-redux';
+import UserList from './components/UserList/UserList';
 
-function App() {
+
+function App(props) {
+  let users = props.users;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="header">
+        <h1>Users app</h1>
+      </div>
+      <div className="container">
+        <UserList users={users} />
+      </div>
     </div>
   );
 }
 
-export default App;
+const mapState = (state) => {
+  return state;
+}
+
+export default connect(mapState)(App);

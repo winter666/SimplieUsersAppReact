@@ -1,0 +1,31 @@
+button.custom-btn {
+    width: 150px;
+    height: 1.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+
+    &.success {
+        background-color: #008000;
+        color: #ffffff;
+        border: 1px solid #006400;
+    }
+    &.success:hover {
+        box-shadow: #006400 0 0 3px 1px;
+    }
+
+    &.danger {
+        background-color: #ff0000;
+        color: #ffffff;
+        border: 1px solid #8b0000;
+    }
+    &.danger:hover {
+        box-shadow: #8b0000 0 0 3px 1px;
+    }
+
+    &.info {
+        border: 1px solid #3f3f3f;
+    }
+    &.info:hover {
+        box-shadow: #3f3f3f 0 0 3px 1px;
+    }
+}

@@ -1,0 +1,31 @@
+$arrowParameter: 10px;
+
+.arrow-icon {
+    &::before, &::after {
+        content: " ";
+        width: $arrowParameter;
+        height: $arrowParameter;
+        background-color: #777777;
+        cursor: pointer;
+        display: inline-block;
+        transition: .7s;
+    }
+
+    &.down { 
+        &::before {
+            transform: matrix(1, 1, 0, 1, 0, 0);
+        }
+        &::after {
+            transform: matrix(0, 1, -1, 1, 0, 0);
+
+        }
+    }
+    &.up { 
+        &::before {
+            transform: matrix(-1, 1, 0, 1, 0, 0);
+        }
+        &::after {
+            transform: matrix(0, 1, 1, 1, 0, 0);    
+        }   
+    }
+}
